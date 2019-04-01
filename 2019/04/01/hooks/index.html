@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="Controlled vs Uncontrolled Components   When and how to use uncontrolled components   How “Controllable” React components maximize reusability">
+  <meta name="description" content="Rules of Hooks Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions. Only call Hooks from React function components. Don’t call Hooks from regular JavaScrip">
 <meta name="keywords" content="ES6 Node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="详谈React中的受控组件和非受控组件">
-<meta property="og:url" content="http://yoursite.com/2019/01/26/详谈React中的受控组件和非受控组件/index.html">
+<meta property="og:title" content="hooks">
+<meta property="og:url" content="http://yoursite.com/2019/04/01/hooks/index.html">
 <meta property="og:site_name" content="Joey&#39;s Blog">
-<meta property="og:description" content="Controlled vs Uncontrolled Components   When and how to use uncontrolled components   How “Controllable” React components maximize reusability">
+<meta property="og:description" content="Rules of Hooks Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions. Only call Hooks from React function components. Don’t call Hooks from regular JavaScrip">
 <meta property="og:locale" content="chinese">
-<meta property="og:updated_time" content="2019-01-26T17:05:22.937Z">
+<meta property="og:updated_time" content="2019-04-01T14:59:15.484Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="详谈React中的受控组件和非受控组件">
-<meta name="twitter:description" content="Controlled vs Uncontrolled Components   When and how to use uncontrolled components   How “Controllable” React components maximize reusability">
+<meta name="twitter:title" content="hooks">
+<meta name="twitter:description" content="Rules of Hooks Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions. Only call Hooks from React function components. Don’t call Hooks from regular JavaScrip">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/26/详谈React中的受控组件和非受控组件/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/01/hooks/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>详谈React中的受控组件和非受控组件 | Joey's Blog</title>
+  <title>hooks | Joey's Blog</title>
   
 
 
@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/26/详谈React中的受控组件和非受控组件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/hooks/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Joey Ko">
@@ -310,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">详谈React中的受控组件和非受控组件
+          <h1 class="post-title" itemprop="name headline">hooks
 
               
             
@@ -336,24 +336,12 @@
                 
               
 
-              <time title="Created: 2019-01-26 14:02:16" itemprop="dateCreated datePublished" datetime="2019-01-26T14:02:16+08:00">2019-01-26</time>
+              <time title="Created: 2019-04-01 22:54:43 / Modified: 22:59:15" itemprop="dateCreated datePublished" datetime="2019-04-01T22:54:43+08:00">2019-04-01</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-27 01:05:22" itemprop="dateModified" datetime="2019-01-27T01:05:22+08:00">2019-01-27</time>
               
             
           </span>
@@ -387,15 +375,10 @@
       
 
       
-        <blockquote>
-<p><a href="https://medium.com/myheritage-engineering/how-controllable-react-components-maximize-reusability-86e3d233fa8e" target="_blank" rel="noopener">Controlled vs Uncontrolled Components</a></p>
-</blockquote>
-<blockquote>
-<p><a href="https://medium.com/@adarshsingh1407/react-champ-part-ii-when-to-use-controlled-uncontrolled-components-870f42cf398" target="_blank" rel="noopener">When and how to use uncontrolled components</a></p>
-</blockquote>
-<blockquote>
-<p><a href="https://medium.com/myheritage-engineering/how-controllable-react-components-maximize-reusability-86e3d233fa8e" target="_blank" rel="noopener">How “Controllable” React components maximize reusability</a></p>
-</blockquote>
+        <h2 id="Rules-of-Hooks"><a href="#Rules-of-Hooks" class="headerlink" title="Rules of Hooks"></a>Rules of Hooks</h2><ul>
+<li>Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions.</li>
+<li>Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks. We’ll learn about them in a moment.)</li>
+</ul>
 
       
     </div>
@@ -426,15 +409,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/01/26/详谈React中的受控组件和非受控组件/" rel="next" title="详谈React中的受控组件和非受控组件">
+                <i class="fa fa-chevron-left"></i> 详谈React中的受控组件和非受控组件
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/01/hooks/" rel="prev" title="hooks">
-                hooks <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -479,8 +462,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -524,6 +516,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Rules-of-Hooks"><span class="nav-number">1.</span> <span class="nav-text">Rules of Hooks</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
