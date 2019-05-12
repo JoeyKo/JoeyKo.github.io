@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="Rules of Hooks Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions. Only call Hooks from React function components. Don’t call Hooks from regular JavaScrip">
+  <meta name="description" content="CSS Modules能够在指定作用域范围内定义类名和动画名 使用1234/* style.css */.className &amp;#123;  color: green;&amp;#125; 123import styles from &quot;./style.css&quot;;element.innerHTML = &apos;&amp;lt;div class=&quot;&apos; + styles.className + &apos;&quot;&amp;gt;&apos;; 组合123">
 <meta name="keywords" content="ES6 Node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hooks">
-<meta property="og:url" content="http://yoursite.com/2019/04/01/hooks/index.html">
+<meta property="og:title" content="Modules">
+<meta property="og:url" content="http://yoursite.com/2019/05/12/CSS Modules/index.html">
 <meta property="og:site_name" content="Joey&#39;s Blog">
-<meta property="og:description" content="Rules of Hooks Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions. Only call Hooks from React function components. Don’t call Hooks from regular JavaScrip">
+<meta property="og:description" content="CSS Modules能够在指定作用域范围内定义类名和动画名 使用1234/* style.css */.className &amp;#123;  color: green;&amp;#125; 123import styles from &quot;./style.css&quot;;element.innerHTML = &apos;&amp;lt;div class=&quot;&apos; + styles.className + &apos;&quot;&amp;gt;&apos;; 组合123">
 <meta property="og:locale" content="chinese">
-<meta property="og:updated_time" content="2019-04-01T15:01:52.545Z">
+<meta property="og:updated_time" content="2019-05-12T14:57:10.632Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hooks">
-<meta name="twitter:description" content="Rules of Hooks Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions. Only call Hooks from React function components. Don’t call Hooks from regular JavaScrip">
+<meta name="twitter:title" content="Modules">
+<meta name="twitter:description" content="CSS Modules能够在指定作用域范围内定义类名和动画名 使用1234/* style.css */.className &amp;#123;  color: green;&amp;#125; 123import styles from &quot;./style.css&quot;;element.innerHTML = &apos;&amp;lt;div class=&quot;&apos; + styles.className + &apos;&quot;&amp;gt;&apos;; 组合123">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/01/hooks/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/12/CSS Modules/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>Hooks | Joey's Blog</title>
+  <title>Modules | Joey's Blog</title>
   
 
 
@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/hooks/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/12/CSS Modules/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Joey Ko">
@@ -310,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hooks
+          <h1 class="post-title" itemprop="name headline">Modules
 
               
             
@@ -336,7 +336,7 @@
                 
               
 
-              <time title="Created: 2019-04-01 22:54:43 / Modified: 23:01:52" itemprop="dateCreated datePublished" datetime="2019-04-01T22:54:43+08:00">2019-04-01</time>
+              <time title="Created: 2019-05-12 22:41:14 / Modified: 22:57:10" itemprop="dateCreated datePublished" datetime="2019-05-12T22:41:14+08:00">2019-05-12</time>
             
 
             
@@ -375,9 +375,24 @@
       
 
       
-        <h2 id="Rules-of-Hooks"><a href="#Rules-of-Hooks" class="headerlink" title="Rules of Hooks"></a>Rules of Hooks</h2><ul>
-<li>Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions.</li>
-<li>Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks. We’ll learn about them in a moment.)</li>
+        <p>CSS Modules能够在指定作用域范围内定义类名和动画名</p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* style.css */</span></span><br><span class="line"><span class="selector-class">.className</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> styles <span class="keyword">from</span> <span class="string">"./style.css"</span>;</span><br><span class="line"></span><br><span class="line">element.innerHTML = <span class="string">'&lt;div class="'</span> + styles.className + <span class="string">'"&gt;'</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.className</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.otherClassName</span> &#123;</span><br><span class="line">  <span class="attribute">composes</span>: className;</span><br><span class="line">  <span class="comment">/* composes: classNameA classNameB; */</span></span><br><span class="line">  <span class="attribute">color</span>: yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><ul>
+<li><h2 id="从其它文件引入"><a href="#从其它文件引入" class="headerlink" title="从其它文件引入"></a>从其它文件引入</h2> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.otherClassName</span> &#123;</span><br><span class="line">  <span class="attribute">composes</span>: className from <span class="string">"./style.css"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><h2 id="引入全局类名"><a href="#引入全局类名" class="headerlink" title="引入全局类名"></a>引入全局类名</h2>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.otherClassName</span> &#123;</span><br><span class="line">  <span class="attribute">composes</span>: globalClassName from global;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="预处理器使用"><a href="#预处理器使用" class="headerlink" title="预处理器使用"></a>预处理器使用</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:global</span> &#123;</span><br><span class="line">  .global-class-name &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">green</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="为什么使用它"><a href="#为什么使用它" class="headerlink" title="为什么使用它?"></a>为什么使用它?</h1><p>模块化和可复用的CSS!</p>
+<ul>
+<li>样式不冲突</li>
+<li>显示依赖</li>
+<li>无全局作用域</li>
 </ul>
 
       
@@ -409,8 +424,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/26/Controlled and Uncontrolled Component/" rel="next" title="详谈React中的受控组件和非受控组件">
-                <i class="fa fa-chevron-left"></i> 详谈React中的受控组件和非受控组件
+              <a href="/2019/05/03/Graphic/" rel="next" title="Graphic">
+                <i class="fa fa-chevron-left"></i> Graphic
               </a>
             
           </div>
@@ -418,10 +433,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/02/Shallow compare/" rel="prev" title="React中的浅比较">
-                React中的浅比较 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -531,7 +542,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Rules-of-Hooks"><span class="nav-number">1.</span> <span class="nav-text">Rules of Hooks</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用"><span class="nav-number">1.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组合"><span class="nav-number">2.</span> <span class="nav-text">组合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#依赖"><span class="nav-number">3.</span> <span class="nav-text">依赖</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#从其它文件引入"><span class="nav-number">3.1.</span> <span class="nav-text">从其它文件引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入全局类名"><span class="nav-number">3.2.</span> <span class="nav-text">引入全局类名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#预处理器使用"><span class="nav-number">4.</span> <span class="nav-text">预处理器使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么使用它"><span class="nav-number">5.</span> <span class="nav-text">为什么使用它?</span></a></li></ol></div>
             
 
           </div>

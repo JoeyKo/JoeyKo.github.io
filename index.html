@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/02/React中的浅比较/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/12/CSS Modules/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Joey Ko">
@@ -313,7 +313,311 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/02/React中的浅比较/" class="post-title-link" itemprop="url">React中的浅比较</a>
+                <a href="/2019/05/12/CSS Modules/" class="post-title-link" itemprop="url">Modules</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-12 22:41:14 / Modified: 22:57:10" itemprop="dateCreated datePublished" datetime="2019-05-12T22:41:14+08:00">2019-05-12</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>CSS Modules能够在指定作用域范围内定义类名和动画名</p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* style.css */</span></span><br><span class="line"><span class="selector-class">.className</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> styles <span class="keyword">from</span> <span class="string">"./style.css"</span>;</span><br><span class="line"></span><br><span class="line">element.innerHTML = <span class="string">'&lt;div class="'</span> + styles.className + <span class="string">'"&gt;'</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.className</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.otherClassName</span> &#123;</span><br><span class="line">  <span class="attribute">composes</span>: className;</span><br><span class="line">  <span class="comment">/* composes: classNameA classNameB; */</span></span><br><span class="line">  <span class="attribute">color</span>: yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><ul>
+<li><h2 id="从其它文件引入"><a href="#从其它文件引入" class="headerlink" title="从其它文件引入"></a>从其它文件引入</h2> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.otherClassName</span> &#123;</span><br><span class="line">  <span class="attribute">composes</span>: className from <span class="string">"./style.css"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><h2 id="引入全局类名"><a href="#引入全局类名" class="headerlink" title="引入全局类名"></a>引入全局类名</h2>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.otherClassName</span> &#123;</span><br><span class="line">  <span class="attribute">composes</span>: globalClassName from global;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="预处理器使用"><a href="#预处理器使用" class="headerlink" title="预处理器使用"></a>预处理器使用</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:global</span> &#123;</span><br><span class="line">  .global-class-name &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">green</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="为什么使用它"><a href="#为什么使用它" class="headerlink" title="为什么使用它?"></a>为什么使用它?</h1><p>模块化和可复用的CSS!</p>
+<ul>
+<li>样式不冲突</li>
+<li>显示依赖</li>
+<li>无全局作用域</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/03/Graphic/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joey Ko">
+      <meta itemprop="description" content="少抱怨，多思考">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joey's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/03/Graphic/" class="post-title-link" itemprop="url">Graphic</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-03 20:41:28 / Modified: 21:40:31" itemprop="dateCreated datePublished" datetime="2019-05-03T20:41:28+08:00">2019-05-03</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Graphic-tutorial"><a href="#Graphic-tutorial" class="headerlink" title="Graphic tutorial"></a>Graphic tutorial</h1><p><code>WebGLRenderingContext</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line"><span class="keyword">var</span> gl = canvas.getContext(<span class="string">'webgl'</span>);</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/02/Shallow compare/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joey Ko">
+      <meta itemprop="description" content="少抱怨，多思考">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joey's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/02/Shallow compare/" class="post-title-link" itemprop="url">React中的浅比较</a>
               
             
           </h1>
@@ -355,7 +659,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-03 16:19:04" itemprop="dateModified" datetime="2019-05-03T16:19:04+08:00">2019-05-03</time>
+                <time title="Modified: 2019-05-12 22:42:09" itemprop="dateModified" datetime="2019-05-12T22:42:09+08:00">2019-05-12</time>
               
             
           </span>
@@ -600,7 +904,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/26/详谈React中的受控组件和非受控组件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/26/Controlled and Uncontrolled Component/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Joey Ko">
@@ -620,7 +924,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/01/26/详谈React中的受控组件和非受控组件/" class="post-title-link" itemprop="url">详谈React中的受控组件和非受控组件</a>
+                <a href="/2019/01/26/Controlled and Uncontrolled Component/" class="post-title-link" itemprop="url">详谈React中的受控组件和非受控组件</a>
               
             
           </h1>
@@ -662,7 +966,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-27 01:05:22" itemprop="dateModified" datetime="2019-01-27T01:05:22+08:00">2019-01-27</time>
+                <time title="Modified: 2019-05-12 22:41:47" itemprop="dateModified" datetime="2019-05-12T22:41:47+08:00">2019-05-12</time>
               
             
           </span>
@@ -791,7 +1095,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
